@@ -55,7 +55,7 @@ public class Solution {
         int[][] map = {{1, 1, 0, 0}, {1, 0, 0, 1}, {0, 1, 1, 1}, {1, 0, 1, 0}};
         map = s.flipAndInvertImage(map);
         for (int i = 0; i < map.length; i++) {
-            for (Integer x: map[i]) {
+            for (Integer x : map[i]) {
                 System.out.print(x + ", ");
             }
             System.out.print("       ");

@@ -13,14 +13,14 @@ public class Solution {
     }
 
     private void getResult(int[] candidates, int target, int start, List<List<Integer>> result, List<Integer> current) {
-        if(target < 0)
+        if (target < 0)
             return;
-        if(target == 0) {
+        if (target == 0) {
             result.add(new ArrayList<>(current));
             return;
         }
 
-        for(int i = start; i < candidates.length && candidates[i] <= target; i++) {
+        for (int i = start; i < candidates.length && candidates[i] <= target; i++) {
             current.add(candidates[i]);
             getResult(candidates, target - candidates[i], i, result, current);
             current.remove(current.size() - 1);
@@ -29,7 +29,7 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution s = new Solution();
-        int[] nums = {2,3,6,7};
+        int[] nums = {2, 3, 6, 7};
         System.out.println(s.combinationSum(nums, 7));
     }
 
