@@ -1,7 +1,5 @@
 package Array.Best_Time_to_Buy_and_Sell_Stock_with_Transaction_Fee;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import static java.lang.Math.max;
 
@@ -40,15 +38,5 @@ public class Solution {
             hold = max(hold, cash - prices[i]);
         }
         return cash;
-    }
-
-    public static void main(String[] args) {
-        Solution s = new Solution();
-
-        // [1,3,2,8,4,9]
-        int[] prices = {1, 3, 2, 8, 4, 9};
-        int fee = 2;
-
-        System.out.println(s.maxProfit(prices, fee));
     }
 }
