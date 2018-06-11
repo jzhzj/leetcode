@@ -26,7 +26,6 @@ public class Solution {
             }
             dp[i] = dp[i - 1] + temp;
         }
-
         return n > 9 ? dp[9] : dp[n];
     }
 }
