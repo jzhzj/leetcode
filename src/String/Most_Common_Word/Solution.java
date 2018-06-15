@@ -36,6 +36,7 @@ public class Solution {
     public String mostCommonWord(String paragraph, String[] banned) {
         String[] words = paragraph.split(" ");
         for (int i = 0; i < words.length; i++) {
+            words[i] = words[i].toLowerCase();
             if (!words[i].matches("\\b[a-zA-Z]+\\b")) {
                 int len = words[i].length();
                 words[i] = words[i].substring(0, len - 1);
