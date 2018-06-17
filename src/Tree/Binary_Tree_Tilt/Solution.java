@@ -2,9 +2,6 @@ package Tree.Binary_Tree_Tilt;
 
 import Tree.TreeNode;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Given a binary tree, return the tilt of the whole tree.
  *
