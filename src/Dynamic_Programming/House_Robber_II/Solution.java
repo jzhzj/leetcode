@@ -1,7 +1,5 @@
 package Dynamic_Programming.House_Robber_II;
 
-import java.util.Arrays;
-
 /**
  * You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. All houses at this place are arranged in a circle. That means the first house is the neighbor of the last one. Meanwhile, adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
  * <p>
@@ -38,10 +36,5 @@ public class Solution {
             excl = Math.max(temp, excl);
         }
         return Math.max(incl, excl);
-    }
-
-    public static void main(String[] args) {
-        int[] nums = {2, 3, 2};
-        System.out.println(new Solution().rob(nums));
     }
 }
