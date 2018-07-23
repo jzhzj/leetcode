@@ -26,41 +26,21 @@ package String.Count_And_Say;
  * */
 public class Solution {
     public String countAndSay(int n) {
-        return countAndSay("1", n);
-    }
-
-    private String countAndSay(String str, int n) {
-        if (n == 1)
-            return str;
-        char[] chars = str.toCharArray();
-        int len = chars.length;
-        StringBuilder sb = new StringBuilder();
-        int cur = 1;
-        char curChar = chars[0];
-        if (len == 1) {
-            sb.append(1);
-            sb.append(chars[0]);
-            return countAndSay(sb.toString(), n - 1);
-        }
-        for (int i = 1; i < len; i++) {
-            if (chars[i] == curChar) {
-                cur++;
-                if (i == len - 1) {
-                    sb.append(cur);
-                    sb.append(curChar);
-                }
-            } else {
-                sb.append(cur);
-                sb.append(curChar);
-                if (i < len - 1) {
-                    curChar = chars[i];
-                    cur = 1;
+        String s = "1";
+        for (int i = 1; i < n; i++) {
+            int count = 1;
+            StringBuilder sb = new StringBuilder();
+            for (int j = 1; j < s.length(); j++) {
+                if (s.charAt(j) == s.charAt(j - 1)) {
+                    count++;
                 } else {
-                    sb.append(1);
-                    sb.append(chars[i]);
+                    sb.append(count).append(s.charAt(j - 1));
+                    count = 1;
                 }
             }
+            sb.append(count).append(s.charAt(s.length() - 1));
+            s = sb.toString();
         }
-        return countAndSay(sb.toString(), n - 1);
+        return s;
     }
 }
