@@ -1,0 +1,14 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# Idea configuartion directory
+*.idea
+
+# Build output
+/target
+
+# test class
+Test.java
